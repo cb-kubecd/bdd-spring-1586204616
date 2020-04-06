@@ -1,0 +1,251 @@
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-mvl54[0m
+{"level":"warn","ts":1586205259.4891655,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586205259.4897757,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-pmz2c[0m
+{"level":"warn","ts":1586205260.5467103,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1586205260.5480053,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-cb-kubecd-bdd-spring-1586204616-vbk8c-kbgpq[0m
+{"level":"warn","ts":1586205268.3775864,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1586205269.5688274,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/bdd-spring-1586204616.git @ master in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:7915d267b455ca3a22f8584ee7bd78681f1d8d67,1:996da9a4d9504b90657c1a03836812acbebe7515
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 996da9a4d9504b90657c1a03836812acbebe7515: 7915d267b455ca3a22f8584ee7bd78681f1d8d67:
+DEBUG: ran git fetch --unshallow origin 996da9a4d9504b90657c1a03836812acbebe7515: 7915d267b455ca3a22f8584ee7bd78681f1d8d67: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 7915d267b455ca3a22f8584ee7bd78681f1d8d67
+DEBUG: ran git reset --hard 7915d267b455ca3a22f8584ee7bd78681f1d8d67 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 996da9a4d9504b90657c1a03836812acbebe7515
+DEBUG: ran git merge 996da9a4d9504b90657c1a03836812acbebe7515 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 7915d267b455ca3a22f8584ee7bd78681f1d8d67..HEAD
+Merged SHA 996da9a4d9504b90657c1a03836812acbebe7515 with commit message 'My first PR commit' into base branch master
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-set-version[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.example:bdd-spring-1586204616 >------------------
+[INFO] Building demo 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- versions-maven-plugin:2.7:set (default-cli) @ bdd-spring-1586204616 ---
+[INFO] Searching for local aggregator root...
+[INFO] Local aggregation root: /workspace/source
+[INFO] Processing change of com.example:bdd-spring-1586204616:0.0.1-SNAPSHOT -> 0.0.0-SNAPSHOT-PR-1-1
+[INFO] Processing com.example:bdd-spring-1586204616
+[INFO]     Updating project com.example:bdd-spring-1586204616
+[INFO]         from version 0.0.1-SNAPSHOT to 0.0.0-SNAPSHOT-PR-1-1
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  17.510 s
+[INFO] Finished at: 2020-04-06T20:34:52Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-mvn-install[0m
+Picked up _JAVA_OPTIONS: -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -Dsun.zip.disableMemoryMapping=true -XX:+UseParallelGC -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Xms10m -Xmx192m
+OpenJDK 64-Bit Server VM warning: If the number of processors is expected to increase from one, then you should configure the number of parallel GC threads appropriately using -XX:ParallelGCThreads=N
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------< com.example:bdd-spring-1586204616 >------------------
+[INFO] Building demo 0.0.0-SNAPSHOT-PR-1-1
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:resources (default-resources) @ bdd-spring-1586204616 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 0 resource
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:compile (default-compile) @ bdd-spring-1586204616 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:3.1.0:testResources (default-testResources) @ bdd-spring-1586204616 ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /workspace/source/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.8.1:testCompile (default-testCompile) @ bdd-spring-1586204616 ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 1 source file to /workspace/source/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:3.0.0-M1:test (default-test) @ bdd-spring-1586204616 ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.bddspring1586204616.DemoApplicationTests
+20:35:15.967 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:35:16.029 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:35:16.148 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.bddspring1586204616.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+20:35:16.230 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.bddspring1586204616.DemoApplicationTests], using SpringBootContextLoader
+20:35:16.236 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.bddspring1586204616.DemoApplicationTests]: class path resource [com/example/bddspring1586204616/DemoApplicationTests-context.xml] does not exist
+20:35:16.236 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.bddspring1586204616.DemoApplicationTests]: class path resource [com/example/bddspring1586204616/DemoApplicationTestsContext.groovy] does not exist
+20:35:16.237 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.bddspring1586204616.DemoApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:35:16.238 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.bddspring1586204616.DemoApplicationTests]: DemoApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:35:16.356 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.bddspring1586204616.DemoApplicationTests]
+20:35:16.535 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/workspace/source/target/classes/com/example/bddspring1586204616/DemoApplication.class]
+20:35:16.538 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.bddspring1586204616.DemoApplication for test class com.example.bddspring1586204616.DemoApplicationTests
+20:35:16.747 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.bddspring1586204616.DemoApplicationTests]: using defaults.
+20:35:16.751 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+20:35:16.822 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.transaction.TransactionalTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttributeSource]
+20:35:16.833 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [org/springframework/transaction/interceptor/TransactionAttribute]
+20:35:16.835 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4229bb3f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@56cdfb3b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2b91004a, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@20ccf40b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2fb3536e, org.springframework.test.context.event.EventPublishingTestExecutionListener@169e6180, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@35aea049, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7205765b, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@47987356, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@22ef9844, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6283d8b8]
+20:35:16.852 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@618425b5 testClass = DemoApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@58695725 testClass = DemoApplicationTests, locations = '{}', classes = '{class com.example.bddspring1586204616.DemoApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1ffe63b9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@12e61fe6, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@7adda9cc, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@bef2d72], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+20:35:17.020 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-06 20:35:17.664  INFO 63 --- [           main] c.e.b.DemoApplicationTests               : Starting DemoApplicationTests on cb-kubecd-bdd-spring-1586204616-vbk8c-1-from-build-pack-g8wnp-p with PID 63 (started by root in /workspace/source)
+2020-04-06 20:35:17.668  INFO 63 --- [           main] c.e.b.DemoApplicationTests               : No active profile set, falling back to default profiles: default
+2020-04-06 20:35:25.966  INFO 63 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-06 20:35:27.768  INFO 63 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-04-06 20:35:28.533  INFO 63 --- [           main] c.e.b.DemoApplicationTests               : Started DemoApplicationTests in 11.493 seconds (JVM running for 14.501)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.694 s - in com.example.bddspring1586204616.DemoApplicationTests
+2020-04-06 20:35:29.458  INFO 63 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-jar-plugin:3.1.2:jar (default-jar) @ bdd-spring-1586204616 ---
+[INFO] Building jar: /workspace/source/target/bdd-spring-1586204616-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.2.6.RELEASE:repackage (repackage) @ bdd-spring-1586204616 ---
+[INFO] Replacing main artifact with repackaged archive
+[INFO] 
+[INFO] --- maven-install-plugin:2.5.2:install (default-install) @ bdd-spring-1586204616 ---
+[INFO] Installing /workspace/source/target/bdd-spring-1586204616-0.0.0-SNAPSHOT-PR-1-1.jar to /home/jenkins/.mvnrepository/com/example/bdd-spring-1586204616/0.0.0-SNAPSHOT-PR-1-1/bdd-spring-1586204616-0.0.0-SNAPSHOT-PR-1-1.jar
+[INFO] Installing /workspace/source/pom.xml to /home/jenkins/.mvnrepository/com/example/bdd-spring-1586204616/0.0.0-SNAPSHOT-PR-1-1/bdd-spring-1586204616-0.0.0-SNAPSHOT-PR-1-1.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  37.920 s
+[INFO] Finished at: 2020-04-06T20:35:34Z
+[INFO] ------------------------------------------------------------------------
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-skaffold-version[0m
+v1.0.1
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Resolved base name openjdk:8-jdk-slim to openjdk:8-jdk-slim 
+[36mINFO[0m[0000] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0000] Resolved base name openjdk:8-jdk-slim to openjdk:8-jdk-slim 
+[36mINFO[0m[0000] Retrieving image manifest openjdk:8-jdk-slim 
+ERROR: logging before flag.Parse: E0406 20:35:35.826217       9 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0406 20:35:35.830081       9 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0001] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0002] Built cross stage deps: map[]                
+[36mINFO[0m[0002] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0003] Retrieving image manifest openjdk:8-jdk-slim 
+[36mINFO[0m[0004] cmd: EXPOSE                                  
+[36mINFO[0m[0004] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0004] Resolving srcs [pom.xml target/lib*]...      
+end of resolve sources
+[36mINFO[0m[0004] Checking for cached layer gcr.io/jenkins-x-bdd3/cache:23a2261b256c516297ac01340a218051862966d11a101e3c439833593a5e999e... 
+[36mINFO[0m[0004] No cached layer found for cmd COPY pom.xml target/lib* /opt/lib/ 
+[36mINFO[0m[0004] Resolving srcs [target/*.jar]...             
+end of resolve sources
+[36mINFO[0m[0005] Unpacking rootfs as cmd COPY pom.xml target/lib* /opt/lib/ requires it. 
+[36mINFO[0m[0012] Taking snapshot of full filesystem...        
+[36mINFO[0m[0014] Resolving paths                              
+[36mINFO[0m[0015] ENV PORT 8080                                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] ENV CLASSPATH /opt/lib                       
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] EXPOSE 8080                                  
+[36mINFO[0m[0015] cmd: EXPOSE                                  
+[36mINFO[0m[0015] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0015] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0015] Resolving srcs [pom.xml target/lib*]...      
+end of resolve sources
+[36mINFO[0m[0015] COPY pom.xml target/lib* /opt/lib/           
+[36mINFO[0m[0015] Resolving srcs [pom.xml target/lib*]...      
+[36mINFO[0m[0015] Resolving paths                              
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0015] Pushing layer gcr.io/jenkins-x-bdd3/cache:23a2261b256c516297ac01340a218051862966d11a101e3c439833593a5e999e to cache now 
+[36mINFO[0m[0015] Resolving srcs [target/*.jar]...             
+end of resolve sources
+end of resolve sources
+[36mINFO[0m[0015] COPY target/*.jar /opt/app.jar               
+[36mINFO[0m[0015] Resolving srcs [target/*.jar]...             
+end of resolve sources
+[36mINFO[0m[0015] Resolving paths                              
+[36mINFO[0m[0015] Taking snapshot of files...                  
+[36mINFO[0m[0016] Pushing layer gcr.io/jenkins-x-bdd3/cache:7d53b60d551bdf4d2839fb79612d66590d69786ae83b0167dbe2051b3fdf71ee to cache now 
+[36mINFO[0m[0016] WORKDIR /opt                                 
+[36mINFO[0m[0016] cmd: workdir                                 
+[36mINFO[0m[0016] Changed working directory to /opt            
+[36mINFO[0m[0016] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0016] CMD ["java", "-XX:+UnlockExperimentalVMOptions", "-XX:+UseCGroupMemoryLimitForHeap", "-jar", "app.jar"] 
+[36mINFO[0m[0016] No files changed in this command, skipping snapshotting. 
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/jenkins-x-bdd3\/bdd-spring-1586204616|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for https://storage.googleapis.com/chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://jenkins-x-chartmuseum:8080 from vault helm/repos
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+WARNING: No secrets found on "helm/repos" due: reading the secret "helm/repos" from vault: no secret "helm/repos" not found in vault
+Read credentials for http://chartmuseum.jenkins-x.io from vault helm/repos
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mcb-kubecd-bdd-spring-1586204616-vbk8c-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment cb-kubecd-bdd-spring-1586204616-pr-1
+Namespace **-cb-kubecd-bdd-spring-1586204616-pr-1 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 35.205.94.191.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/jenkins-x-bdd3/bdd-spring-1586204616
+    tag: 0.0.0-SNAPSHOT-PR-1-1
+
+Updating PipelineActivities cb-kubecd-bdd-spring-1586204616-pr-1-1 which has status Running
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.089834185s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 2.067017638s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 1.184096588s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 3.853521982s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 5.531407751s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 4.027136847s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 14.24697294s
+WARNING: preview application http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io not available, error was 503 503 Service Temporarily Unavailable, delaying for: 11.122330987s
+Preview application is now available at: http://bdd-spring-1586204616.**-cb-kubecd-bdd-spring-1586204616-pr-1.35.205.94.191.nip.io
